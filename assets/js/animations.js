@@ -38,7 +38,7 @@ class LoadingAnimation {
         setTimeout(() => {
             logger.log('Loading complete, starting transition');
             this.finishLoading();
-        }, 2500); // 2.5 seconds total
+        }, 1400); // 1.4 seconds total
     }
 
     finishLoading() {
