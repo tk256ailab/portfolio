@@ -1,0 +1,197 @@
+# TK256 Portfolio Website
+
+CS学生TK256のポートフォリオサイト。機械学習・Web開発プロジェクトと技術記事を紹介しています。
+
+## 🌟 Features
+
+- **多言語対応**: 日本語/英語の切り替え機能
+- **レスポンシブデザイン**: モバイル、タブレット、デスクトップに対応
+- **動的コンテンツ**: プロジェクトとブログの動的読み込み
+- **統計情報表示**: GitHub、AtCoder、Kaggleの統計を自動取得
+- **アニメーション**: 星空背景、ローディング画面、スムーズなトランジション
+
+## 📁 ディレクトリ構造
+
+```
+portfolio/
+├── index.html                 # トップページ
+├── pages/                     # 各ページ
+│   ├── about.html            # 自己紹介ページ
+│   ├── projects.html         # プロジェクト一覧
+│   └── blogs.html            # ブログ一覧
+├── assets/                    # 静的リソース
+│   ├── css/                  # スタイルシート
+│   │   ├── base.css         # 基本スタイル
+│   │   ├── components.css   # コンポーネントスタイル
+│   │   └── animations.css   # アニメーション
+│   ├── js/                   # JavaScriptモジュール
+│   │   ├── components.js    # コンポーネントローダー
+│   │   ├── language.js      # 多言語切替
+│   │   ├── filters.js       # フィルター機能
+│   │   ├── animations.js    # アニメーション
+│   │   ├── stats.js         # 統計情報取得
+│   │   ├── navigation.js    # ナビゲーション
+│   │   └── main.js          # メイン初期化
+│   └── images/               # 画像ファイル
+│       ├── profile/         # プロフィール画像
+│       ├── projects/        # プロジェクト画像
+│       └── blogs/           # ブログ画像
+├── components/                # 共通HTMLコンポーネント
+│   ├── header.html          # ヘッダー
+│   ├── footer.html          # フッター
+│   └── loading.html         # ローディング画面
+└── README.md                  # このファイル
+```
+
+## 🚀 セットアップ
+
+### ローカル環境での実行
+
+1. リポジトリをクローン:
+```bash
+git clone https://github.com/tk256ailab/portfolio.git
+cd portfolio
+```
+
+2. ローカルサーバーを起動 (例: Python):
+```bash
+# Python 3
+python -m http.server 8000
+
+# Python 2
+python -m SimpleHTTPServer 8000
+```
+
+3. ブラウザで開く:
+```
+http://localhost:8000
+```
+
+### GitHub Pagesでの公開
+
+1. GitHubリポジトリにプッシュ
+2. Settings > Pages > Source: "Deploy from a branch"
+3. Branch: `main`, Folder: `/` (root)
+4. Saveをクリック
+
+数分後、`https://[username].github.io/portfolio/` でアクセス可能になります。
+
+## ✏️ コンテンツの編集方法
+
+### プロジェクトの追加
+
+`assets/js/filters.js` の `ProjectFilter` クラス内の `loadProjects()` メソッドに新しいプロジェクトオブジェクトを追加:
+
+```javascript
+{
+    id: 6,
+    title: 'プロジェクト名',
+    titleEn: 'Project Name',
+    description: '日本語の説明',
+    descriptionEn: 'English description',
+    image: 'assets/images/projects/project-image.png',
+    github: 'https://github.com/username/repo',
+    demo: 'https://demo-url.com',
+    tags: ['Python', 'AI', 'ML'],
+    category: 'ai'
+}
+```
+
+### ブログ記事の追加
+
+`pages/blogs.html` のブロググリッド内に新しい記事カードを追加:
+
+```html
+<article class="blog-card" data-category="ai" data-qiita-id="article-id">
+    <div class="blog-image">
+        <img src="../assets/images/blogs/article-image.webp" alt="Article Title">
+    </div>
+    <div class="blog-info">
+        <div class="blog-meta-top">
+            <span class="blog-date">2025.01.01</span>
+            <div class="blog-likes" data-platform="qiita">
+                <i class="fas fa-heart"></i>
+                <span class="likes-count">--</span>
+            </div>
+        </div>
+        <div class="blog-tags">
+            <span class="blog-category ai">
+                <span class="jp">AI・機械学習</span>
+                <span class="en" style="display: none;">AI・ML</span>
+            </span>
+        </div>
+        <h3>
+            <span class="jp">記事タイトル（日本語）</span>
+            <span class="en" style="display: none;">Article Title (English)</span>
+        </h3>
+        <p>
+            <span class="jp">記事の説明（日本語）</span>
+            <span class="en" style="display: none;">Article description (English)</span>
+        </p>
+        <div class="blog-links">
+            <a href="https://qiita.com/tk256ailab/items/article-id" target="_blank" class="blog-link">
+                <i class="fas fa-external-link-alt"></i>
+                <span class="jp">記事を読む</span>
+                <span class="en" style="display: none;">Read Article</span>
+            </a>
+        </div>
+    </div>
+</article>
+```
+
+### プロフィール情報の更新
+
+`pages/about.html` の該当セクションを編集:
+- プロフィール基本情報
+- スキル
+- 実績
+- 経歴
+
+## 🎨 カスタマイズ
+
+### カラーテーマの変更
+
+`assets/css/components.css` の色変数を編集:
+- メインカラー: `#4a9eff`
+- 背景色: `#0a0a0a`
+- テキストカラー: `#e8e8e8`
+
+### アニメーションの調整
+
+`assets/css/animations.css` で各種アニメーションの速度や効果を調整できます。
+
+## 🔧 技術スタック
+
+- **HTML5**: セマンティックマークアップ
+- **CSS3**: Flexbox、Grid、カスタムプロパティ
+- **JavaScript (ES6+)**: クラスベース、モジュール設計
+- **Font Awesome**: アイコン
+- **GitHub API**: リポジトリ統計
+- **Qiita API / Note API**: ブログいいね数取得
+
+## 📱 対応ブラウザ
+
+- Chrome (最新版)
+- Firefox (最新版)
+- Safari (最新版)
+- Edge (最新版)
+
+## 📄 ライセンス
+
+© 2025 TK256. All rights reserved.
+
+## 🤝 コントリビューション
+
+このプロジェクトは個人のポートフォリオサイトですが、改善提案は歓迎します。
+Issueやプルリクエストをお気軽にどうぞ。
+
+## 📞 お問い合わせ
+
+- **X (Twitter)**: [@tk256ailab](https://x.com/tk256ailab)
+- **GitHub**: [tk256ailab](https://github.com/tk256ailab)
+- **Qiita**: [tk256ailab](https://qiita.com/tk256ailab)
+- **note**: [tk256ailab](https://note.com/tk256ailab)
+
+---
+
+Made with ❤️ by TK256

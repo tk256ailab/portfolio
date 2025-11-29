@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - tk256ailab Portfolio</title>
+    <meta name="description" content="tk256ailabのプロジェクト一覧。Web開発、機械学習、データサイエンスなどの技術プロジェクトを紹介。">
+    <meta name="keywords" content="projects, web development, machine learning, data science, AI, portfolio">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tk256ailab">
+    <meta name="twitter:creator" content="@tk256ailab">
+    <meta name="twitter:title" content="Projects - TK256 | 開発プロジェクト">
+    <meta name="twitter:description" content="TK256の開発プロジェクト一覧。Web開発、機械学習、データサイエンスなどの技術プロジェクトを紹介">
+    <meta name="twitter:image" content="https://tk256ailab.github.io/portfolio/assets/images/profile/og-image.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TK256 Portfolio">
+    <meta property="og:title" content="Projects - TK256 | 開発プロジェクト">
+    <meta property="og:description" content="TK256の開発プロジェクト一覧。Web開発、機械学習、データサイエンスなどの技術プロジェクトを紹介">
+    <meta property="og:image" content="https://tk256ailab.github.io/portfolio/assets/images/profile/og-image.png">
+    <meta property="og:url" content="https://tk256ailab.github.io/portfolio/pages/projects.html">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body class="lang-en">
+    <div class="stars"></div>
+    <div class="shooting-stars"></div>
+
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>
+                    <span class="jp">プロジェクト</span>
+                    <span class="en" style="display: none;">Projects</span>
+                </h1>
+                <p>
+                    <span class="jp">これまでに取り組んだプロジェクトをご紹介します</span>
+                    <span class="en" style="display: none;">Here are the projects I have worked on</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="projects-content">
+            <div class="container">
+                <div class="projects-filters">
+                    <div class="search-container">
+                        <input type="text" id="project-search" placeholder="Search projects..." data-jp="プロジェクトを検索..." data-en="Search projects...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="tag-filters" id="project-tag-filters">
+                        <button class="tag-filter-btn active" data-tag="all">
+                            <span class="jp">すべて</span>
+                            <span class="en" style="display: none;">All</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts - Load in correct order -->
+    <script src="../assets/js/error-handler.js"></script>
+    <script src="../assets/js/logger.js"></script>
+    <script src="../assets/js/language.js"></script>
+    <script src="../assets/js/filters.js"></script>
+    <script src="../assets/js/animations.js"></script>
+    <script src="../assets/js/stats.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/app-initializer.js"></script>
+    <script>
+        // Initialize app
+        AppInitializer.init();
+    </script>
+</body>
+</html>

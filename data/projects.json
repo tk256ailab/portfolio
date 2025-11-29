@@ -1,0 +1,62 @@
+[
+  {
+    "id": 5,
+    "title": "AIMascotKit",
+    "titleEn": "AIMascotKit",
+    "description": "WebブラウザでVRMファイルを表示・操作できるビューアーアプリケーション。Three.jsを使用してリアルタイムレンダリングを実現。",
+    "descriptionEn": "A viewer application that can display and manipulate VRM files in web browsers. Achieves real-time rendering using Three.js.",
+    "image": "assets/images/projects/004_AIMascotKit.PNG",
+    "github": "https://github.com/tk256ailab/AIMascotKit",
+    "demo": null,
+    "tags": ["Python", "JavaScript", "Three.js", "WebGL", "VRM", "AI"],
+    "category": "web"
+  },
+  {
+    "id": 4,
+    "title": "VRM Viewer",
+    "titleEn": "VRM Viewer",
+    "description": "WebブラウザでVRMファイルを表示・操作できるビューアーアプリケーション。Three.jsを使用してリアルタイムレンダリングを実現。",
+    "descriptionEn": "A viewer application that can display and manipulate VRM files in web browsers. Achieves real-time rendering using Three.js.",
+    "image": "assets/images/projects/001_VRMViewer.png",
+    "github": "https://github.com/tk256ailab/vrm-viewer",
+    "demo": "https://tk256ailab.github.io/vrm-viewer/",
+    "tags": ["JavaScript", "Three.js", "WebGL", "VRM"],
+    "category": "web"
+  },
+  {
+    "id": 3,
+    "title": "FBX to VRMA Converter",
+    "titleEn": "FBX to VRMA Converter",
+    "description": "FBX形式のアニメーションファイルから、VRMアバター用のVRMA形式アニメーションファイルを作成する変換ツール。",
+    "descriptionEn": "A conversion tool that generates VRMA-format animation files for VRM avatars from FBX-format animation files.",
+    "image": "assets/images/projects/002_FBX2VRMA.png",
+    "github": "https://github.com/tk256ailab/fbx2vrma-converter",
+    "demo": null,
+    "tags": ["JavaScript", "Node.js", "Animation", "VRM"],
+    "category": "tool"
+  },
+  {
+    "id": 2,
+    "title": "Kaggle Template",
+    "titleEn": "Kaggle Template",
+    "description": "Kaggleコンペ用のテンプレート。各コンペは基本的にプライベートリポジトリになっています。",
+    "descriptionEn": "This is a template for Kaggle competitions. Each competition is basically stored in a private repository.",
+    "image": "assets/images/projects/003_Kaggle.png",
+    "github": "https://github.com/tk256ailab/kaggle-template",
+    "demo": null,
+    "tags": ["Python", "Machine Learning", "Data Science", "Kaggle"],
+    "category": "ml"
+  },
+  {
+    "id": 1,
+    "title": "AIパートナー：桜夜",
+    "titleEn": "AI Partner: Sayo",
+    "description": "個人用AIアシスタントの開発プロジェクト。自然言語処理技術を活用して、日常的なタスクから専門的な質問まで対応。",
+    "descriptionEn": "Personal AI assistant development project. Handles daily tasks to specialized questions using natural language processing.",
+    "image": "assets/images/blogs/002_AITuberDevelopmentDay1to30.webp",
+    "github": null,
+    "demo": "#",
+    "tags": ["Python", "OpenAI API", "FastAPI", "AI"],
+    "category": "ai"
+  }
+]

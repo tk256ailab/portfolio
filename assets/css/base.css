@@ -1,0 +1,83 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e8e8e8;
+    background: #0a0a0a;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body.loading {
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a9eff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #66b3ff;
+}
+
+/* Language switching based on body class */
+body.lang-jp .en {
+    display: none !important;
+}
+
+body.lang-jp .jp {
+    display: block !important;
+}
+
+body.lang-en .en {
+    display: block !important;
+}
+
+body.lang-en .jp {
+    display: none !important;
+}
+
+/* Main Content */
+main {
+    padding-top: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 120px;
+    }
+}

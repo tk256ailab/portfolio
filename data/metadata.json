@@ -1,0 +1,18 @@
+{
+  "site": {
+    "version": "2.0.0",
+    "lastUpdated": "2025-01-14",
+    "description": "TK256のポートフォリオサイト - 毎月1日更新"
+  },
+  "dataUpdates": {
+    "projects": "2025-01-14",
+    "blogs": "2025-01-14",
+    "stats": "2025-01-14"
+  },
+  "updateChecklist": {
+    "statsUpdated": true,
+    "projectsReviewed": true,
+    "blogsAdded": true,
+    "note": "毎月1日にこのチェックリストを確認してください"
+  }
+}
