@@ -2,6 +2,8 @@
 
 CS学生TK256のポートフォリオサイト。機械学習・Web開発プロジェクトと技術記事を紹介しています。
 
+[サイトはこちら](https://tk256ailab.github.io/portfolio/index.html)
+
 ## 🌟 Features
 
 - **多言語対応**: 日本語/英語の切り替え機能
