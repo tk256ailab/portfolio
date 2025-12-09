@@ -186,10 +186,8 @@ class BlogFilter extends BaseFilter {
         'node.js': 'tag-nodejs',
         'rest api': 'tag-rest-api',
         'backend': 'tag-backend',
-        'express.js': 'tag-expressjs',
         'algorithm': 'tag-algorithm',
         'data structures': 'tag-data-structures',
-        'dynamic programming': 'tag-dynamic-programming',
         'graph theory': 'tag-graph-theory',
         'computer science': 'tag-computer-science',
         'nlp': 'tag-nlp',
@@ -285,7 +283,11 @@ class ProjectFilter extends BaseFilter {
         'kaggle': 'tag-kaggle',
         'openai api': 'tag-openai',
         'fastapi': 'tag-fastapi',
-        'ai': 'tag-ai'
+        'ai': 'tag-ai',
+        'atcoder': 'tag-atcoder',
+        'algorithm': 'tag-algorithm',
+        'c++': 'tag-cpp',
+        'html': 'tag-html'
       }
     });
 

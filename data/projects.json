@@ -1,4 +1,40 @@
 [
+    {
+    "id": 8,
+    "title": "AtCoder",
+    "titleEn": "AtCoder",
+    "description": "過去に参加したコンテストの解答を記録。",
+    "descriptionEn": "A collection of solutions to the AtCoder contests I have participated in.",
+    "image": "assets/images/projects/007_AtCoder.jpg",
+    "github": "https://github.com/tk256ailab/atcoder",
+    "demo": null,
+    "tags": ["AtCoder", "Algorithm", "C++"],
+    "category": "code"
+  },
+  {
+    "id": 7,
+    "title": "競プロアルゴリズム集",
+    "titleEn": "Algorithm Library",
+    "description": "競プロで頻出のアルゴリズム集。各アルゴリズムの概要とC++での実装例を紹介。",
+    "descriptionEn": "A collection of commonly used algorithms in competitive programming, with explanations and C++ implementations.",
+    "image": "assets/images/projects/006_Algorithms.png",
+    "github": "https://github.com/tk256ailab/algorithms",
+    "demo": null,
+    "tags": ["Algorithm", "C++"],
+    "category": "code"
+  },
+  {
+    "id": 6,
+    "title": "Portfolio",
+    "titleEn": "Portfolio",
+    "description": "このポートフォリオサイトのリポジトリ。",
+    "descriptionEn": "The repository of this portfolio website.",
+    "image": "assets/images/projects/005_Portfolio.png",
+    "github": "https://github.com/tk256ailab/portfolio",
+    "demo": null,
+    "tags": ["HTML", "JavaScript"],
+    "category": "web"
+  },
   {
     "id": 5,
     "title": "AIMascotKit",
@@ -9,7 +45,7 @@
     "github": "https://github.com/tk256ailab/AIMascotKit",
     "demo": null,
     "tags": ["Python", "JavaScript", "Three.js", "WebGL", "VRM", "AI"],
-    "category": "web"
+    "category": "ai"
   },
   {
     "id": 4,
@@ -20,7 +56,7 @@
     "image": "assets/images/projects/001_VRMViewer.png",
     "github": "https://github.com/tk256ailab/vrm-viewer",
     "demo": "https://tk256ailab.github.io/vrm-viewer/",
-    "tags": ["JavaScript", "Three.js", "WebGL", "VRM"],
+    "tags": ["HTML", "JavaScript", "Three.js", "WebGL", "VRM"],
     "category": "web"
   },
   {

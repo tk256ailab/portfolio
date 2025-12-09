@@ -36,6 +36,11 @@ class ComponentLoader {
                     this.fixNavigationLinks();
                 }
 
+                // After loading footer, update last updated date
+                if (componentName === 'footer') {
+                    this.updateLastUpdatedDate();
+                }
+
                 return true;
             } else {
                 logger.warn(`Target selector "${targetSelector}" not found for ${componentName}`);
@@ -110,6 +115,59 @@ class ComponentLoader {
                 }
             }
         });
+    }
+
+    async updateLastUpdatedDate() {
+        try {
+            const response = await fetch(`${this.basePath}data/metadata.json`);
+            if (!response.ok) {
+                throw new Error(`Failed to load metadata: ${response.status}`);
+            }
+
+            const metadata = await response.json();
+            const lastUpdated = metadata.site?.lastUpdated || '--';
+
+            // Format date for Japanese (YYYY年MM月DD日)
+            const jpElement = document.getElementById('site-last-updated-jp');
+            if (jpElement) {
+                const dateJp = this.formatDateJapanese(lastUpdated);
+                jpElement.textContent = dateJp;
+            }
+
+            // Format date for English (Month DD, YYYY)
+            const enElement = document.getElementById('site-last-updated-en');
+            if (enElement) {
+                const dateEn = this.formatDateEnglish(lastUpdated);
+                enElement.textContent = dateEn;
+            }
+        } catch (error) {
+            logger.error('Error loading last updated date:', error);
+        }
+    }
+
+    formatDateJapanese(dateString) {
+        if (!dateString || dateString === '--') return '--';
+
+        try {
+            const [year, month, day] = dateString.split('-');
+            return `${year}年${parseInt(month)}月${parseInt(day)}日`;
+        } catch (error) {
+            logger.error('Error formatting Japanese date:', error);
+            return dateString;
+        }
+    }
+
+    formatDateEnglish(dateString) {
+        if (!dateString || dateString === '--') return '--';
+
+        try {
+            const date = new Date(dateString);
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return date.toLocaleDateString('en-US', options);
+        } catch (error) {
+            logger.error('Error formatting English date:', error);
+            return dateString;
+        }
     }
 }
 

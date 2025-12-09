@@ -535,14 +535,14 @@ header {
     margin-bottom: 1rem;
 }
 
-.bio-section, .skills-section, .achievements-section, .education-section {
+.bio-section, .skills-section, .certifications-section, .achievements-section, .education-section {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     padding: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.bio-section h3, .skills-section h3, .achievements-section h3, .education-section h3 {
+.bio-section h3, .skills-section h3, .certifications-section h3, .achievements-section h3, .education-section h3 {
     color: #4a9eff;
     margin-bottom: 1.5rem;
     font-size: 1.3rem;
@@ -575,6 +575,60 @@ header {
     color: #4a9eff;
     position: absolute;
     left: 0;
+}
+
+/* Certifications Section */
+.certifications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.certification-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.certification-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(74, 158, 255, 0.3);
+    transform: translateX(5px);
+}
+
+.cert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: rgba(74, 158, 255, 0.1);
+    border-radius: 8px;
+    color: #4a9eff;
+    font-size: 1.2rem;
+}
+
+.cert-details {
+    flex: 1;
+}
+
+.cert-details h4 {
+    color: #e8e8e8;
+    margin: 0 0 0.3rem 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.cert-meta {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
 }
 
 .achievements-list {
@@ -895,41 +949,62 @@ header {
     border-color: rgba(74, 158, 255, 0.4);
 }
 
+/* 2420行あたりはデッドコード */
+/* 以下はプロジェクトとブログの両方で使われている */
+
 /* Project Tag Colors - Vibrant Pastels */
+/* TODO: 色が適切か見直し */
+
+/* ==== Programming ==== */
 .project-tag.tag-python { background: linear-gradient(135deg, #a8d5ff 0%, #7fb3ff 100%); color: #2563eb; border: none; box-shadow: 0 2px 4px rgba(37, 99, 235, 0.15); }
 .project-tag.tag-javascript { background: linear-gradient(135deg, #fff7a8 0%, #ffed4e 100%); color: #d97706; border: none; box-shadow: 0 2px 4px rgba(217, 119, 6, 0.15); }
-.project-tag.tag-react { background: linear-gradient(135deg, #b3f0ff 0%, #61dafb 100%); color: #0369a1; border: none; box-shadow: 0 2px 4px rgba(3, 105, 161, 0.15); }
-.project-tag.tag-nodejs { background: linear-gradient(135deg, #b3f0ff 0%, #61dafb 100%); color: #0369a1; border: none; box-shadow: 0 2px 4px rgba(3, 105, 161, 0.15); }
-.project-tag.tag-threejs { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #18181b; border: none; box-shadow: 0 2px 4px rgba(24, 24, 27, 0.15); }
-.project-tag.tag-webgl { background: linear-gradient(135deg, #ffc9e0 0%, #ff8fb3 100%); color: #be185d; border: none; box-shadow: 0 2px 4px rgba(190, 24, 93, 0.15); }
-.project-tag.tag-vrm { background: linear-gradient(135deg, #f9c5ff 0%, #f08fff 100%); color: #a21caf; border: none; box-shadow: 0 2px 4px rgba(162, 28, 175, 0.15); }
-.project-tag.tag-animation { background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 100%); color: #7e22ce; border: none; box-shadow: 0 2px 4px rgba(126, 34, 206, 0.15); }
-.project-tag.tag-ml { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
-.project-tag.tag-datascience { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1d4ed8; border: none; box-shadow: 0 2px 4px rgba(29, 78, 216, 0.15); }
-.project-tag.tag-kaggle { background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%); color: #0e7490; border: none; box-shadow: 0 2px 4px rgba(14, 116, 144, 0.15); }
-.project-tag.tag-openai { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #047857; border: none; box-shadow: 0 2px 4px rgba(4, 120, 87, 0.15); }
-.project-tag.tag-fastapi { background: linear-gradient(135deg, #99f6e4 0%, #5eead4 100%); color: #0f766e; border: none; box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15); }
+.project-tag.tag-cpp { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1e40af; border: none; box-shadow: 0 2px 4px rgba(30, 64, 175, 0.15); }
+
+/* ==== AI / Machine Learning / Data Science ==== */
 .project-tag.tag-ai { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #c2410c; border: none; box-shadow: 0 2px 4px rgba(194, 65, 12, 0.15); }
-.project-tag.tag-3d-modeling { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
-.project-tag.tag-character-design { background: linear-gradient(135deg, #f9c5ff 0%, #f08fff 100%); color: #a21caf; border: none; box-shadow: 0 2px 4px rgba(162, 28, 175, 0.15); }
-.project-tag.tag-tool-development { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #18181b; border: none; box-shadow: 0 2px 4px rgba(24, 24, 27, 0.15); }
-.project-tag.tag-web-dev { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1d4ed8; border: none; box-shadow: 0 2px 4px rgba(29, 78, 216, 0.15); }
-.project-tag.tag-rest-api { background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%); color: #0e7490; border: none; box-shadow: 0 2px 4px rgba(14, 116, 144, 0.15); }
-.project-tag.tag-backend { background: linear-gradient(135deg, #99f6e4 0%, #5eead4 100%); color: #0f766e; border: none; box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15); }
-.project-tag.tag-expressjs { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #047857; border: none; box-shadow: 0 2px 4px rgba(4, 120, 87, 0.15); }
+.project-tag.tag-ml { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
+.project-tag.tag-deep-learning { background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); color: #6b21a8; border: none; box-shadow: 0 2px 4px rgba(107, 33, 168, 0.15); }
+.project-tag.tag-nlp { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
+.project-tag.tag-kaggle { background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%); color: #0e7490; border: none; box-shadow: 0 2px 4px rgba(14, 116, 144, 0.15); }
+.project-tag.tag-transformer { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #ea580c; border: none; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.15); }
+.project-tag.tag-tensorflow { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #c2410c; border: none; box-shadow: 0 2px 4px rgba(194, 65, 12, 0.15); }
+.project-tag.tag-datascience { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1d4ed8; border: none; box-shadow: 0 2px 4px rgba(29, 78, 216, 0.15); }
+.project-tag.tag-openai { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #047857; border: none; box-shadow: 0 2px 4px rgba(4, 120, 87, 0.15); }
+
+/* ==== Computer Science / Algorithm ==== */
 .project-tag.tag-algorithm { background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); color: #6b21a8; border: none; box-shadow: 0 2px 4px rgba(107, 33, 168, 0.15); }
-.project-tag.tag-data-structures { background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 100%); color: #7e22ce; border: none; box-shadow: 0 2px 4px rgba(126, 34, 206, 0.15); }
-.project-tag.tag-dynamic-programming { background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%); color: #7c3aed; border: none; box-shadow: 0 2px 4px rgba(124, 58, 237, 0.15); }
 .project-tag.tag-graph-theory { background: linear-gradient(135deg, #c7d2fe 0%, #a5b4fc 100%); color: #4338ca; border: none; box-shadow: 0 2px 4px rgba(67, 56, 202, 0.15); }
 .project-tag.tag-computer-science { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1e40af; border: none; box-shadow: 0 2px 4px rgba(30, 64, 175, 0.15); }
-.project-tag.tag-nlp { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
-.project-tag.tag-transformer { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #ea580c; border: none; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.15); }
-.project-tag.tag-unity { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #27272a; border: none; box-shadow: 0 2px 4px rgba(39, 39, 42, 0.15); }
-.project-tag.tag-aituber { background: linear-gradient(135deg, #ffc9e0 0%, #ff8fb3 100%); color: #be185d; border: none; box-shadow: 0 2px 4px rgba(190, 24, 93, 0.15); }
-.project-tag.tag-software-dev { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #059669; border: none; box-shadow: 0 2px 4px rgba(5, 150, 105, 0.15); }
-.project-tag.tag-deep-learning { background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%); color: #6b21a8; border: none; box-shadow: 0 2px 4px rgba(107, 33, 168, 0.15); }
-.project-tag.tag-tensorflow { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #c2410c; border: none; box-shadow: 0 2px 4px rgba(194, 65, 12, 0.15); }
+.project-tag.tag-data-structures { background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 100%); color: #7e22ce; border: none; box-shadow: 0 2px 4px rgba(126, 34, 206, 0.15); }
+.project-tag.tag-atcoder { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #27272a; border: none; box-shadow: 0 2px 4px rgba(39, 39, 42, 0.15); }
+
+/* ==== 3D / Graphics ==== */
 .project-tag.tag-blender { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #c2410c; border: none; box-shadow: 0 2px 4px rgba(194, 65, 12, 0.15); }
+.project-tag.tag-unity { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #27272a; border: none; box-shadow: 0 2px 4px rgba(39, 39, 42, 0.15); }
+.project-tag.tag-3d-modeling { background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%); color: #dc2626; border: none; box-shadow: 0 2px 4px rgba(220, 38, 38, 0.15); }
+.project-tag.tag-vrm { background: linear-gradient(135deg, #99f6e4 0%, #5eead4 100%); color: #0f766e; border: none; box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15); }
+
+/* ==== Creative / Character / Animation ==== */
+.project-tag.tag-aituber { background: linear-gradient(135deg, #ffc9e0 0%, #ff8fb3 100%); color: #be185d; border: none; box-shadow: 0 2px 4px rgba(190, 24, 93, 0.15); }
+.project-tag.tag-animation { background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 100%); color: #7e22ce; border: none; box-shadow: 0 2px 4px rgba(126, 34, 206, 0.15); }
+.project-tag.tag-character-design { background: linear-gradient(135deg, #f9c5ff 0%, #f08fff 100%); color: #a21caf; border: none; box-shadow: 0 2px 4px rgba(162, 28, 175, 0.15); }
+
+/* ==== Web Frontend ==== */
+.project-tag.tag-react { background: linear-gradient(135deg, #b3f0ff 0%, #61dafb 100%); color: #0369a1; border: none; box-shadow: 0 2px 4px rgba(3, 105, 161, 0.15); }
+.project-tag.tag-webgl { background: linear-gradient(135deg, #ffc9e0 0%, #ff8fb3 100%); color: #be185d; border: none; box-shadow: 0 2px 4px rgba(190, 24, 93, 0.15); }
+.project-tag.tag-threejs { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #047857; border: none; box-shadow: 0 2px 4px rgba(4, 120, 87, 0.15); }
+.project-tag.tag-html { background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%); color: #ea580c; border: none; box-shadow: 0 2px 4px rgba(234, 88, 12, 0.15); }
+
+/* ==== Web Backend ==== */
+.project-tag.tag-backend { background: linear-gradient(135deg, #99f6e4 0%, #5eead4 100%); color: #0f766e; border: none; box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15); }
+.project-tag.tag-nodejs { background: linear-gradient(135deg, #b3f0ff 0%, #61dafb 100%); color: #0369a1; border: none; box-shadow: 0 2px 4px rgba(3, 105, 161, 0.15); }
+.project-tag.tag-rest-api { background: linear-gradient(135deg, #a5f3fc 0%, #67e8f9 100%); color: #0e7490; border: none; box-shadow: 0 2px 4px rgba(14, 116, 144, 0.15); }
+.project-tag.tag-fastapi { background: linear-gradient(135deg, #99f6e4 0%, #5eead4 100%); color: #0f766e; border: none; box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15); }
+.project-tag.tag-web-dev { background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%); color: #1d4ed8; border: none; box-shadow: 0 2px 4px rgba(29, 78, 216, 0.15); }
+
+/* ==== Others ==== */
+.project-tag.tag-tool-development { background: linear-gradient(135deg, #d4d4d8 0%, #a1a1aa 100%); color: #18181b; border: none; box-shadow: 0 2px 4px rgba(24, 24, 27, 0.15); }
+.project-tag.tag-software-dev { background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 100%); color: #059669; border: none; box-shadow: 0 2px 4px rgba(5, 150, 105, 0.15); }
 
 .project-info h3 {
     color: #4a9eff;
@@ -2052,6 +2127,12 @@ footer p {
     color: #999;
 }
 
+footer .last-updated {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 0.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
@@ -2333,7 +2414,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .overview-card, .bio-section, .skills-section, .achievements-section, .education-section {
+    .overview-card, .bio-section, .skills-section, .certifications-section, .achievements-section, .education-section {
         padding: 1.5rem;
     }
 
